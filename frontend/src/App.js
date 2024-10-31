@@ -10,6 +10,8 @@ import ArticleDetailPage from "./pages/articleDetail/ArticleDetailPage";
 import LoginPage from './pages/login/LoginPage';
 import RegisterPage from './pages/register/RegisterPage';
 import UserDashboardPage from './pages/userDashboard/UserDashboardPage';
+import ProfilePage from './pages/profile/ProfilePage';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/userDashboard/*" element={<UserDashboardPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <Toaster />
     </div>

@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import path from "path";
 import connectDB from './config/db.js';
 import cors from 'cors';
 import { errorResponserHandler, invalidPathHandler } from './middleware/errorHandler.js';
@@ -18,6 +19,9 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/users', userRoutes);
+
+// Activos estáticos
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 app.use(invalidPathHandler);
 app.use(errorResponserHandler);
